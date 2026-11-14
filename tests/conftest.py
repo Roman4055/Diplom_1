@@ -1,10 +1,18 @@
+
 """
-Общие фикстуры для тестов класса Burger.
-Все моки создаются через unittest.mock.Mock — реальные классы
-Bun и Ingredient в тестах Burger не используются по заданию.
+Общие фикстуры для тестов.
+
+Для тестов Burger используются моки (unittest.mock.Mock) —
+реальные классы Bun и Ingredient в тестах Burger не нужны по заданию.
+
+Для тестов Database используется реальный объект Database:
+база содержит фиксированные данные.
 """
 import pytest
 from unittest.mock import Mock
+
+from praktikum.burger import Burger
+from praktikum.database import Database
 
 # Константы для моков: что вернут геттеры
 MOCK_BUN_NAME = 'белый хлеб'
@@ -48,5 +56,9 @@ def mock_ingredient_filling():
 @pytest.fixture
 def burger():
     """Чистый экземпляр Burger без булочки и ингредиентов."""
-    from praktikum.burger import Burger
     return Burger()
+
+@pytest.fixture
+def database():
+    """Реальный экземпляр Database с фиксированным набором данных."""
+    return Database()
