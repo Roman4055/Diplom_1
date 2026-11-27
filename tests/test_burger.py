@@ -19,7 +19,7 @@ import pytest
 
 from praktikum.burger import Burger
 
-from helpers import make_bun, make_ingredient
+from tests.helpers import make_bun, make_ingredient
 
 
 # ---------------------------------------------------------------
