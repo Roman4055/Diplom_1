@@ -1,0 +1,25 @@
+# Байт-код Python
+__pycache__/
+*.py[cod]
+
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Кэш pytest
+.pytest_cache/
+
+# Отчёты о покрытии
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Служебные файлы IDE
+.idea/
+.vscode/
+
+# Прочий системный мусор
+.DS_Store
+Thumbs.db
